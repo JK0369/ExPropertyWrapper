@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  @AccessToken var accessToken
+  @Flag(name: "isSignIn") var isSignIn
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+
+    @TrimmedString var string = "   trimmined string? \n"
+    print(string) // "trimmined string?"
+    
+    print(self.accessToken) // "defaultValue"
+    print(self.isSignIn) // false
+    print(self.$isSignIn) // "isSignIn"
   }
-
-
 }
-
